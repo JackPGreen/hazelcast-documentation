@@ -147,11 +147,14 @@ The following metrics describe a map on the member:
 | `map.indexesSkippedQueryCount` | count | Total number of local queries performed on the map which cannot use indexes | N |
 | `map.noMatchingIndexQueryCount` | count | Total number of local queries performed on the map which had no matching index | N |
 | `map.lastAccessTime` | ms | Last access (read) time of the locally owned entries | C |
+| `map.lastOversizedEntrySize` | bytes | Size of the most recent [oversized entry](../develop-and-build/distributed-data-structures/ap-data-structures/map/reading-map-metrics.mdx#detect-oversized-entries) written to the locally owned partitions | C |
+| `map.lastOversizedEntryTime` | ms | Time of the most recent [oversized entry](../develop-and-build/distributed-data-structures/ap-data-structures/map/reading-map-metrics.mdx#detect-oversized-entries) written to the locally owned partitions | C |
 | `map.lastUpdateTime` | ms | Last update time of the locally owned entries | C |
 | `map.lockedEntryCount` | count | Number of locked entries that the member owns | C |
 | `map.merkleTreesCost` | count | Total heap cost of the Merkle trees used | N |
 | `map.numberOfEvents` | count | Number of local events received on the map | N |
 | `map.numberOfOtherOperations` | count | Total number of other operations performed on this member | N |
+| `map.oversizedEntriesSeen` | count | Number of writes of an [oversized entry](../develop-and-build/distributed-data-structures/ap-data-structures/map/reading-map-metrics.mdx#detect-oversized-entries) to the locally owned partitions | C |
 | `map.ownedEntryCount` | count | Number of map entries owned by the member | C |
 | `map.ownedEntryMemoryCost` | bytes | Memory cost of owned map entries on this member | C |
 | `map.putCount` | count | Number of local put operations on the map | N |
